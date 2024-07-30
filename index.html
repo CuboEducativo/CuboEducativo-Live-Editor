@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Cubo Educativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="editor-container">
+            <h2>HTML</h2>
+            <textarea id="html-code" name="html-code"><!DOCTYPE html>
+<html>
+<head>
+    <title>Editor Cubo Educativo</title>
+</head>
+<body>
+    <h1>Hola, mundo!</h1>
+</body>
+</html></textarea>
+        </div>
+        <div class="editor-container">
+            <h2>CSS</h2>
+            <textarea id="css-code" name="css-code">body { font-family: Arial, sans-serif; background-color: #f0f0f0; }</textarea>
+        </div>
+        <div class="editor-container">
+            <h2>JavaScript</h2>
+            <textarea id="js-code" name="js-code">console.log('Hola, mundo!');</textarea>
+        </div>
+    </div>
+    <button onclick="runCode()">Ejecutar Código</button>
+    <iframe id="output" sandbox="allow-scripts" style="width: 100%; height: 300px;"></iframe>
+</body>
+</html>
