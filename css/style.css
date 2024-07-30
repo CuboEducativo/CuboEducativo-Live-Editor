@@ -16,16 +16,27 @@ body {
 }
 .editor-container h2 {
     margin: 0 0 10px 0;
+    color: #1a73e8;
 }
 .CodeMirror {
     border: 1px solid #ccc;
     flex: 1;
     height: auto;
     min-height: 200px;
+    font-size: 16px;
 }
 button {
     align-self: flex-start;
     margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #155a9a;
 }
 #output {
     margin-top: 20px;
@@ -35,4 +46,7 @@ button {
     height: 300px;
     overflow: auto;
     width: 100%;
+}
+.theme-toggle {
+    align-self: flex-end;
 }
