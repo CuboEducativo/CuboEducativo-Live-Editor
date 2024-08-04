@@ -38,6 +38,7 @@ iframe {
 .carousel .carousel-item {
     height: 700px;
   }
-.card {
-    height: 400px;
+
+.small-code {
+    font-size: 10px;
   }

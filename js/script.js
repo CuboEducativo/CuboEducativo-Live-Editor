@@ -93,6 +93,38 @@ document.getElementById('text').innerText = "This text was changed by JavaScript
         newWindow.document.close();
     }
 
+    // JavaScript para mostrar/ocultar tarjetas
+    $(document).ready(function() {
+        const cards = document.querySelectorAll('.card');
+        const totalCards = cards.length;
+        let currentCard = 1;
+        
+        $('.btn-primary').click(function() {
+            if ($(this).text() === 'Siguiente') {
+            $('#card' + currentCard).hide();
+            currentCard++;
+            $('#card' + currentCard).show();
+        
+            // Deshabilitar/habilitar botones
+            if (currentCard === totalCards) {
+                $(this).prop('disabled', true);
+            }
+            $('#card' + (currentCard - 1) + ' .btn-primary:first-child').prop('disabled', false);
+            } else {
+            // Lógica para el botón "Anterior"
+            currentCard--;
+            $('#card' + currentCard).show();
+            $('#card' + (currentCard + 1)).hide();
+        
+            // Deshabilitar/habilitar botones
+            if (currentCard === 1) {
+                $(this).prop('disabled', true);
+            }
+            $('#card' + (currentCard + 1) + ' .btn-primary:last-child').prop('disabled', false);
+            }
+        });
+        });  
+
     $('#compile-btn').click(updateOutput);
     $('#full-screen-btn').click(openFullScreen);
 
